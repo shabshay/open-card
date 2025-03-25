@@ -89,4 +89,13 @@ export class TruthOrDareComponent {
     if (player === 1) this.score1++;
     else this.score2++;
   }
+
+  resetGame() {
+    this.usedTruths = [];
+    this.usedDares = [];
+    this.currentCard = '';
+    this.currentLevel = '';
+    this.score1 = 0;
+    this.score2 = 0;
+  }
 }
