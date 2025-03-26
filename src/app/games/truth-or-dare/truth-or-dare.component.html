@@ -21,3 +21,17 @@
 <div class="buttons">
   <button (click)="resetGame()">🔄 התחל מחדש</button>
 </div>
+
+<app-modal
+  *ngIf="showInstructions"
+  title="איך משחקים?"
+  confirmText="הבנתי, נתחיל!"
+  (close)="closeInstructions()"
+>
+  <p>
+    בתורות, כל אחד בוחר אם הוא רוצה לענות על שאלה (אמת) או לבצע משימה (חובה).<br>
+    השלימו את האתגר כדי לצבור נקודות.<br>
+    הראשון להגיע ל-10 נקודות מנצח!
+  </p>
+</app-modal>
+

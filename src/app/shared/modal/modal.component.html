@@ -1,0 +1,12 @@
+<div class="modal-backdrop" (keydown.escape)="onClose()" tabindex="0">
+  <div class="modal-content" [ngClass]="{ 'show': visible, 'hide': !visible }">
+    <button class="x-button" (click)="onClose()">×</button>
+    <h2>{{ title }}</h2>
+
+    <div class="modal-body">
+      <ng-content></ng-content>
+    </div>
+
+    <button class="close-button" (click)="onClose()">{{ confirmText }}</button>
+  </div>
+</div>
