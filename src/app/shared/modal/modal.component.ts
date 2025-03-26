@@ -25,6 +25,6 @@ export class ModalComponent implements AfterViewInit {
 
   onClose() {
     this.visible = false;
-    setTimeout(() => this.close.emit(), 300); // התאמה לזמן האנימציה
+    setTimeout(() => this.close.emit(), 200);
   }
 }
