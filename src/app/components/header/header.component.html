@@ -1,10 +1,12 @@
 <header class="header">
-  <nav class="nav" >
-    <a routerLink="/"><img src="assets/open-card-logo.svg" alt="קלף פתוח" class="logo" /></a>
+  <nav class="nav" [class.open]="isMenuOpen">
+    <a routerLink="/games" (click)="toggleMenu()">משחקים</a>
+    <a href="/#about" (click)="toggleMenu()">אודות</a>
+    <a href="/#contact" (click)="toggleMenu()">צור קשר</a>
   </nav>
-  <nav class="nav">
-    <a routerLink="/games">משחקים</a>
-    <a href="/#about">אודות</a>
-    <a href="/#contact">צור קשר</a>
-  </nav>
+
+  <div class="logo-wrapper">
+    <img src="assets/open-card-logo.svg" alt="קלף פתוח" class="logo" />
+    <button class="menu-btn" (click)="toggleMenu()">☰</button>
+  </div>
 </header>
