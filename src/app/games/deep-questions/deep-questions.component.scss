@@ -1,0 +1,50 @@
+:host {
+  display: block;
+  text-align: center;
+  direction: rtl;
+  font-family: Arial, sans-serif;
+  background: #fff3f8;
+  padding: 20px;
+}
+
+h1 {
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: #ff85a2;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #ff5c87;
+    }
+  }
+}
+
+.question-card {
+  background: white;
+  padding: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  font-size: 18px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

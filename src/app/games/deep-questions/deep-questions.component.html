@@ -1,0 +1,10 @@
+<h1>💬 שאלות עומק לזוגות</h1>
+
+<div class="buttons">
+  <button (click)="drawQuestion()">שאלה חדשה</button>
+  <button (click)="resetGame()">🔄 התחלה מחדש</button>
+</div>
+
+<div class="question-card" *ngIf="currentQuestion">
+  {{ currentQuestion }}
+</div>
