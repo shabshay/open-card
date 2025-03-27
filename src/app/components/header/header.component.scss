@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffeaea;
+
+  .logo {
+    height: 55px;
+  }
+
+  .nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #8b3a4c;
+    font-weight: bold;
+  }
+}

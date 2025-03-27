@@ -1,0 +1,89 @@
+:host {
+  display: block;
+  font-family: 'Varela Round', sans-serif;
+  color: #4a2e2e;
+  background-color: #fff4f4;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #fff4f4;
+
+  .text {
+    max-width: 60%;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      background-color: #c8647b;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 1.5rem;
+      font-size: 1rem;
+    }
+  }
+
+  .hero-image {
+    max-width: 200px;
+  }
+}
+
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    background-color: #c8647b;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 1.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+
+    .text {
+      max-width: 100%;
+    }
+
+    .hero-image {
+      margin-top: 2rem;
+    }
+  }
+
+  .header {
+    flex-direction: column;
+
+    .nav a {
+      margin: 0.5rem 0;
+    }
+  }
+}
