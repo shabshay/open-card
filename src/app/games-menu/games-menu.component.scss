@@ -1,8 +1,3 @@
-h1 {
-  color: #d63384;
-  font-size: 2.5em;
-}
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -11,31 +6,6 @@ h1 {
   margin: 40px auto;
 }
 
-.menu-item {
-  width: 100%;
-}
-
-button {
-  font-size: 20px;
-  padding: 15px;
-  border-radius: 12px;
-  border: none;
-  background-color: #ff85a2;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-  &:hover:not(:disabled) {
-    background-color: #ff5c87;
-  }
-
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-  }
-}
-
 .centered-content {
   text-align: center;
-  margin-bottom: 20px;
 }
