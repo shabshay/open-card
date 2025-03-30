@@ -1,0 +1,31 @@
+@use 'colors';
+
+.page {
+  background-color: colors.$page-bg;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    background-color: #c8647b;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 1.2rem;
+    font-size: 1rem;
+  }
+}
