@@ -23,7 +23,7 @@
     }
   }
 
-  &--secondary {
+  &--outline {
     background-color: transparent;
     border: 2px solid c.$rounded-bg;
 
@@ -33,14 +33,10 @@
     }
   }
 
-  &--rounded {
+  &--confirm {
     background-color: c.$rounded-bg;
     color: c.$rounded-text;
     border: none;
-    border-radius: 1.5rem;
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
-    cursor: pointer;
     transition: background 0.3s ease;
 
     &:hover {
