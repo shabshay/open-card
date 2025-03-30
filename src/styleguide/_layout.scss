@@ -2,8 +2,12 @@
 
 .page {
   background-color: colors.$page-bg;
-  min-height: 100vh;
-  padding: 1.5rem;
+  min-height: 70vh;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  margin-top: -1rem;
+  padding: 1rem 1.5rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 section {
