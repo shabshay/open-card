@@ -1,61 +1,76 @@
 :host {
   display: block;
   text-align: center;
-  font-family: Arial, sans-serif;
-  background: #fcefee;
-  padding: 20px;
+  font-family: 'Varela Round', sans-serif;
+  padding: 2rem;
+  background-color: #fff4f4;
+  color: #4a2e2e;
 }
 
 h1 {
-  color: #d63384;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #562c2c;
 }
 
 .score {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  background: #ffeaea;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-
-  button {
-    padding: 12px 24px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    background-color: #ff85a2;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s;
-
-    &:hover {
-      background-color: #ff5c87;
-    }
-  }
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
 }
 
 .card {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
   max-width: 400px;
-  margin: 0 auto 20px;
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  font-size: 18px;
-  line-height: 1.6;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  animation: fadeIn 0.4s ease;
-  border-right: 10px solid #ccc;
+  background-color: #ffeaea;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
-  &.easy { border-color: #8bc34a; }
-  &.medium { border-color: #ffc107; }
-  &.hard { border-color: #f44336; }
+  &.easy {
+    border: 2px solid #7dd87d;
+  }
+
+  &.medium {
+    border: 2px solid #f5cd62;
+  }
+
+  &.hard {
+    border: 2px solid #d95f5f;
+  }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }

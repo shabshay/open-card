@@ -17,6 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styleguide"]
+            },
             "baseHref": "/open-card/",
             "outputPath": "dist/open-card",
             "index": "src/index.html",

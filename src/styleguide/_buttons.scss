@@ -1,0 +1,50 @@
+@use './colors' as c;
+@use './fonts' as f;
+@use 'sass:color';
+
+.button {
+  font-family: f.$font-primary;
+  border: 2px solid c.$border;
+  padding: 0.8em 1.5em;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: transparent;
+  color: c.$text-dark;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  &--primary {
+    background-color: c.$primary;
+    color: c.$text-dark;
+    border: none;
+
+    &:hover {
+      background-color: color.adjust(c.$primary, $lightness: -5%);
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border: 2px solid c.$text-dark;
+
+    &:hover {
+      background-color: c.$text-dark;
+      color: c.$text-light;
+    }
+  }
+
+  &--rounded {
+    background-color: #c8647b;
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #a94c62;
+    }
+  }
+}

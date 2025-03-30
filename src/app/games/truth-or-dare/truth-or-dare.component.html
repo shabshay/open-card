@@ -4,9 +4,8 @@
 </div>
 
 <div class="buttons">
-  <button (click)="drawCard('truth')">אמת</button>
-
-  <button (click)="drawCard('dare')">חובה</button>
+  <button class="button button--primary" (click)="drawCard('dare')">חובה</button>
+  <button class="button button--primary" (click)="drawCard('truth')">אמת</button>
 </div>
 
 <div class="card" [ngClass]="currentLevel" *ngIf="currentCard">
@@ -14,12 +13,12 @@
 </div>
 
 <div class="buttons">
-  <button (click)="addPoint(1)">+ נקודה לו</button>
-  <button (click)="addPoint(2)">+ נקודה לה</button>
+  <button class="button button--rounded" (click)="addPoint(1)">+ נקודה לו</button>
+  <button class="button button--rounded" (click)="addPoint(2)">+ נקודה לה</button>
 </div>
 
 <div class="buttons">
-  <button (click)="resetGame()">התחל מחדש 🔄</button>
+  <button class="button button--secondary" (click)="resetGame()">התחל מחדש 🔄</button>
 </div>
 
 <app-modal

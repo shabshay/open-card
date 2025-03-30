@@ -1,0 +1,11 @@
+@use './colors' as c;
+@use './fonts' as f;
+@use './buttons' as b;
+
+body {
+  font-family: f.$font-primary;
+  background-color: c.$secondary;
+  color: c.$text-dark;
+  margin: 0;
+  padding: 0;
+}

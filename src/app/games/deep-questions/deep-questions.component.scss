@@ -1,50 +1,47 @@
+@use 'colors' as c;
+@use 'fonts' as f;
+@use 'buttons' as b;
+
 :host {
   display: block;
   text-align: center;
   direction: rtl;
-  font-family: Arial, sans-serif;
-  background: #fff3f8;
-  padding: 20px;
+  font-family: f.$font-primary;
+  background: c.$secondary;
+  padding: 2rem;
+  color: c.$text-dark;
 }
 
 h1 {
-  color: #d63384;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-
-  button {
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    border-radius: 12px;
-    background-color: #ff85a2;
-    color: white;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #ff5c87;
-    }
-  }
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .question-card {
   background: white;
-  padding: 24px;
+  padding: 1.5rem;
   max-width: 400px;
   margin: 0 auto;
-  font-size: 18px;
-  border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   animation: fadeIn 0.3s ease-in;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
