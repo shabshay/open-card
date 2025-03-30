@@ -25,17 +25,17 @@
 
   &--secondary {
     background-color: transparent;
-    border: 2px solid c.$text-dark;
+    border: 2px solid c.$rounded-bg;
 
     &:hover {
-      background-color: c.$text-dark;
+      background-color: c.$rounded-bg;
       color: c.$text-light;
     }
   }
 
   &--rounded {
-    background-color: #c8647b;
-    color: white;
+    background-color: c.$rounded-bg;
+    color: c.$rounded-text;
     border: none;
     border-radius: 1.5rem;
     padding: 0.6rem 1.2rem;
@@ -44,7 +44,7 @@
     transition: background 0.3s ease;
 
     &:hover {
-      background-color: #a94c62;
+      background-color: color.adjust(c.$rounded-bg, $lightness: -10%);
     }
   }
 }
