@@ -3,18 +3,7 @@
 @use 'buttons' as b;
 
 :host {
-  display: block;
   text-align: center;
-  direction: rtl;
-  font-family: f.$font-primary;
-  background: c.$secondary;
-  padding: 2rem;
-  color: c.$text-dark;
-}
-
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
 }
 
 .buttons {
