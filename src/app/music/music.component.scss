@@ -1,0 +1,18 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+  margin: 40px auto;
+
+  a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.centered-content {
+  text-align: center;
+}
+
+
