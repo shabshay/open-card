@@ -41,10 +41,10 @@
 
   .nav {
     display: flex;
+    flex-direction: row-reverse;
     gap: 1rem;
 
     a {
-      text-decoration: none;
       color: colors.$text-dark2;
       font-weight: bold;
 
@@ -85,7 +85,6 @@
 
     .nav {
       display: none;
-      flex-direction: column;
       width: 100%;
       margin-top: 1rem;
 
@@ -97,6 +96,7 @@
 
     .nav.open {
       display: flex;
+      flex-direction: row;
       animation: fadeIn 0.3s ease-in;
     }
   }
