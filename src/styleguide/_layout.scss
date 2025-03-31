@@ -13,7 +13,7 @@
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #562c2c;
+    color: colors.$text-header;
   }
 }
 
@@ -32,7 +32,7 @@ section {
   }
 
   button {
-    background-color: #c8647b;
+    background-color: colors.$rounded-bg;
     color: white;
     padding: 0.6rem 1.2rem;
     border: none;

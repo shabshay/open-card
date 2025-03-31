@@ -1,3 +1,5 @@
+@use 'colors';
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -28,7 +30,7 @@
   }
 
   h2 {
-    color: #d63384;
+    color: colors.$text-header;
     margin-bottom: 15px;
   }
 
@@ -37,21 +39,9 @@
     line-height: 1.6;
   }
 
-  button {
-    background-color: #ff85a2;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #ff5c87;
-    }
+  .close-button {
+    margin-top: 14px;
   }
-}
-
-.close-button {
-  padding: 12px 24px;
 }
 
 @keyframes fadeIn {
@@ -66,13 +56,13 @@
   background: transparent;
   border: none;
   font-size: 24px;
-  color: #d63384;
+  color: colors.$rounded-bg;
   cursor: pointer;
   transition: color 0.2s;
   padding: 1px 6px;
 
   &:hover {
-    color: #ff5c87;
+    color: colors.$primary;
   }
 }
 
