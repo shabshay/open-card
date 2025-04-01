@@ -4,9 +4,9 @@
     <button class="menu-btn" (click)="toggleMenu()">☰</button>
   </div>
   <nav class="nav" [class.open]="isMenuOpen">
+    <a routerLink="/" (click)="toggleMenu()">אודות</a>
     <a routerLink="/games" (click)="toggleMenu()">משחקים</a>
     <a routerLink="/music" (click)="toggleMenu()">מוזיקה</a>
-    <a routerLink="/" (click)="toggleMenu()">אודות</a>
     <a href="mailto:shay.shabshay@gmail.com" target="_blank" (click)="toggleMenu()">צור קשר</a>
   </nav>
 </header>
