@@ -1,12 +1,13 @@
-@use './colors' as c;
-@use './fonts' as f;
-@use './buttons' as b;
-@use './layout' as l;
+@use 'colors';
+@use 'fonts';
+@use 'buttons';
+@use 'layout';
+@use 'animations';
 
 body {
-  font-family: f.$font-primary;
-  background-color: c.$secondary;
-  color: c.$text-dark;
+  font-family: fonts.$font-primary;
+  background-color: colors.$secondary;
+  color: colors.$text-dark;
   margin: 1rem;
   padding: 0;
 }
