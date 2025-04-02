@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
-import {TooltipDirective} from '../shared/tooltip.directive';
-import {routesPaths} from '../app.routes';
+import {TooltipDirective} from '../../shared/tooltip.directive';
+import {routesPaths} from '../../../app.routes';
 
 @Component({
   selector: 'app-games-menu',
