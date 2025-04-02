@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgIf} from '@angular/common';
 import {ModalComponent} from '../../shared/modal/modal.component';
+import {questions} from './deep-questions.model';
 
 @Component({
   standalone: true,
@@ -15,17 +16,6 @@ import {ModalComponent} from '../../shared/modal/modal.component';
 export class DeepQuestionsComponent {
   showInstructions = true;
 
-  questions: string[] = [
-    'מה גורם לך להרגיש הכי אהוב/ה?',
-    'מתי בפעם האחרונה הרגשת שאני באמת מבין/ה אותך?',
-    'אם היית צריך לבחור זיכרון אחד לנצור לנצח, מה הוא היה?',
-    'מה היית רוצה שנשפר בזוגיות שלנו?',
-    'מה החלום הכי גדול שלך לעתיד שלנו?',
-    'ממה אתה הכי מפחד בזוגיות?',
-    'מה למדת ממני שלא ציפית?',
-    'איזו מחווה קטנה גורמת לך להתרגש ממני?'
-  ];
-
   usedQuestions: string[] = [];
   currentQuestion: string = '';
 
@@ -34,7 +24,7 @@ export class DeepQuestionsComponent {
   }
 
   drawQuestion() {
-    const available = this.questions.filter(q => !this.usedQuestions.includes(q));
+    const available = questions.filter(q => !this.usedQuestions.includes(q));
 
     if (available.length === 0) {
       this.currentQuestion = 'נגמרו השאלות! אפשר להתחיל מחדש ❤️';
