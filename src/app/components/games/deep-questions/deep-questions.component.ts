@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import {NgIf} from '@angular/common';
+import {ModalComponent} from '../../shared/modal/modal.component';
 
 @Component({
   standalone: true,
   selector: 'app-deep-questions',
   templateUrl: './deep-questions.component.html',
   imports: [
-    NgIf
+    NgIf,
+    ModalComponent
   ],
   styleUrls: ['./deep-questions.component.scss']
 })
 export class DeepQuestionsComponent {
+  showInstructions = true;
+
   questions: string[] = [
     'מה גורם לך להרגיש הכי אהוב/ה?',
     'מתי בפעם האחרונה הרגשת שאני באמת מבין/ה אותך?',
@@ -24,6 +28,10 @@ export class DeepQuestionsComponent {
 
   usedQuestions: string[] = [];
   currentQuestion: string = '';
+
+  closeInstructions() {
+    this.showInstructions = false;
+  }
 
   drawQuestion() {
     const available = this.questions.filter(q => !this.usedQuestions.includes(q));

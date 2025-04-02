@@ -1,10 +1,23 @@
-<h1>שאלות עומק לזוגות 💬</h1>
+<h1>💬 שאלות עומק לזוגות</h1>
+
+<app-modal
+  *ngIf="showInstructions"
+  title="איך משחקים?"
+  confirmText="יאללה, תנו שאלה!"
+  (close)="closeInstructions()"
+>
+  <p>
+    בכל לחיצה תקבלו שאלה עמוקה שתעזור לכם להכיר טוב יותר, להיפתח ולשתף חוויות. <br>
+    מומלץ לענות בכנות ולהקשיב באמת אחד לשנייה. <br>
+    אפשר גם לבחור שאלה אחת ולדבר עליה לאורך זמן – זה לא מרוץ ❤️
+  </p>
+</app-modal>
 
 <div class="buttons">
   <button class="button button--primary" (click)="drawQuestion()">שאלה חדשה</button>
-  <button class="button button--outline" (click)="resetGame()">התחל מחדש 🔄</button>
+  <button class="button button--outline" (click)="resetGame()">🔄 התחל מחדש</button>
 </div>
 
-<div class="question-card" *ngIf="currentQuestion">
-  {{ currentQuestion }}
+<div class="task-card" *ngIf="currentQuestion">
+  <p class="task-card__text">{{ currentQuestion }}</p>
 </div>
