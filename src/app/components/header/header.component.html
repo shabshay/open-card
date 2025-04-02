@@ -4,9 +4,11 @@
     <button class="menu-btn" (click)="toggleMenu()">☰</button>
   </div>
   <nav class="nav" [class.open]="isMenuOpen">
-    <a [routerLink]="routesPaths.home" (click)="toggleMenu()">אודות</a>
-    <a [routerLink]="routesPaths.games" (click)="toggleMenu()">משחקים</a>
-    <a [routerLink]="routesPaths.music" (click)="toggleMenu()">מוזיקה</a>
+    <a [routerLink]="routesPaths.home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMenu()">אודות</a>
+    <a [routerLink]="routesPaths.games" routerLinkActive="active" (click)="toggleMenu()">משחקים</a>
+    <a [routerLink]="routesPaths.music" routerLinkActive="active" (click)="toggleMenu()">מוזיקה</a>
     <a href="mailto:shay.shabshay@gmail.com" target="_blank" (click)="toggleMenu()">צור קשר</a>
   </nav>
+
+
 </header>

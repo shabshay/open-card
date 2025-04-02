@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import {RouterLink} from '@angular/router';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 import {routesPaths} from '../../app.routes';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   imports: [
-    RouterLink
+    RouterLink,
+    RouterLinkActive
   ],
   styleUrls: ['./header.component.scss']
 })

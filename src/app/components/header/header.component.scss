@@ -54,6 +54,12 @@
       }
     }
   }
+
+  a.active {
+    font-weight: bold;
+    color: #793f3f;
+    border-bottom: 2px solid #793f3f;
+  }
 }
 
 @media (max-width: 768px) {
