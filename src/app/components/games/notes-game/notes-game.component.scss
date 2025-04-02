@@ -8,7 +8,6 @@ h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
-
 .input-area {
   display: flex;
   justify-content: center;
@@ -17,11 +16,17 @@ h1 {
 
   input {
     flex: 1;
+    min-width: 200px;
     max-width: 300px;
     padding: 0.5rem;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
     font-size: 1rem;
+  }
+
+  button {
+    flex-shrink: 0;
+    padding-inline: 1.25rem;
   }
 }
 
@@ -38,14 +43,20 @@ h1 {
     margin-bottom: 0.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     font-size: 1rem;
+    word-break: break-word;
   }
 }
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+
+  button {
+    min-width: 140px;
+  }
 }
 
 .task-card {
@@ -60,5 +71,15 @@ h1 {
   &__text {
     font-size: 1.25rem;
     font-weight: bold;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 400px) {
+  .input-area input {
+    max-width: 100%;
+  }
+  .buttons button {
+    flex: 1 1 100%;
   }
 }
