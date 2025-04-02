@@ -40,12 +40,10 @@
 
 <app-modal
   *ngIf="winner"
-  title="🥳 יש מנצח/ת!"
+  title="🥳 כל הכבוד {{ winner }}!"
   confirmText="שחקו שוב"
   (close)="resetGame()"
 >
-  <p>
-    כל הכבוד {{ winner }}!<br>
-    הגעת ל-10 נקודות וניצחת במשחק ❤️
-  </p>
+  <p>{{ victoryMessage }}</p>
 </app-modal>
+

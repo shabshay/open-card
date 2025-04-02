@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NgClass, NgIf} from '@angular/common';
 import {ModalComponent} from '../../shared/modal/modal.component';
-import {dares, pointsByLevel, truths} from './truth-or-dare.model';
+import {dares, pointsByLevel, truths, victoryMessages} from './truth-or-dare.model';
 
 @Component({
   selector: 'app-truth-or-dare',
@@ -27,6 +27,8 @@ export class TruthOrDareComponent {
   score1 = 0;
   score2 = 0;
   winner: string | null = null;
+  victoryMessage = '';
+
 
 
   drawCard(type: 'truth' | 'dare') {
@@ -54,8 +56,19 @@ export class TruthOrDareComponent {
     if (player === 1) this.score1 += points;
     else this.score2 += points;
 
-    if (this.score1 >= 10) this.winner = 'אתה';
-    if (this.score2 >= 10) this.winner = 'את';
+    if (this.score1 >= 10) {
+      this.winner = 'אתה';
+      this.victoryMessage = this.getRandomVictoryMessage('male');
+    }
+    if (this.score2 >= 10) {
+      this.winner = 'את';
+      this.victoryMessage = this.getRandomVictoryMessage('female');
+    }
+  }
+
+  getRandomVictoryMessage(gender: 'male' | 'female'): string {
+    const messages = victoryMessages[gender];
+    return messages[Math.floor(Math.random() * messages.length)];
   }
 
   resetGame() {
