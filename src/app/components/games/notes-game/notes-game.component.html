@@ -1,0 +1,32 @@
+<h1>📝 משחק הפתקים</h1>
+
+<app-modal
+  *ngIf="showInstructions"
+  title="איך משחקים?"
+  confirmText="בואו נתחיל!"
+  (close)="closeInstructions()"
+>
+  <p>
+    כל אחד מבני הזוג כותב פתקים עם משימות, שאלות או אתגרים. <br>
+    אחר כך שולפים פתקים אחד אחד ומשחקים לפי מה שיצא 🎉<br>
+    השתמשו בדמיון ואל תשכחו ליהנות בדרך!
+  </p>
+</app-modal>
+
+<div class="input-area">
+  <input [(ngModel)]="newNote" placeholder="כתוב/י כאן פתק..." />
+  <button class="button button--primary" (click)="addNote()">➕ הוסף</button>
+</div>
+
+<ul class="notes-list">
+  <li *ngFor="let note of notes">📌 {{ note }}</li>
+</ul>
+
+<div class="buttons">
+  <button class="button button--primary" (click)="drawNote()" [disabled]="notes.length === 0">🎲 שלוף פתק!</button>
+  <button class="button button--outline" (click)="resetGame()">🔄 התחל מחדש</button>
+</div>
+
+<div class="task-card" *ngIf="currentNote">
+  <p class="task-card__text">{{ currentNote }}</p>
+</div>
