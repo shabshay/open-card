@@ -86,3 +86,11 @@ a {
     filter: grayscale(60%);
   }
 }
+
+@media (max-width: 400px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1.5rem;
+  }
+}
