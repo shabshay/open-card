@@ -65,3 +65,54 @@
     align-items: center;
   }
 }
+
+.score {
+  font-size: 1.1rem;
+  color: #444;
+  margin: 1rem auto;
+  text-align: center;
+
+  &__label {
+    font-weight: bold;
+    color: #793f3f;
+  }
+}
+
+.task-card {
+  background-color: #fdf7f5;
+  border: 2px solid #e6c5c5;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  animation: fadeIn 0.3s ease-in;
+
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.75rem;
+  }
+
+  &__points {
+    font-size: 0.95rem;
+    color: #777;
+  }
+
+  &.easy {
+    border-color: #a3d9a5;
+    background-color: #f2fff3;
+  }
+
+  &.medium {
+    border-color: #f2d28b;
+    background-color: #fffaf0;
+  }
+
+  &.hard {
+    border-color: #f28b82;
+    background-color: #fff4f4;
+  }
+}

@@ -1,24 +1,28 @@
-<h1>אמת או חובה – לזוגות 🔥</h1>
+<h1>🔥 אמת או חובה – לזוגות</h1>
+
 <div class="score">
-  אתה: {{ score1 }} | את: {{ score2 }}
+  <span class="score__label">אתה:</span> {{ score1 }}
+  |
+  <span class="score__label">את:</span> {{ score2 }}
 </div>
 
 <div class="buttons">
-  <button class="button button--primary" (click)="drawCard('dare')">חובה</button>
-  <button class="button button--primary" (click)="drawCard('truth')">אמת</button>
+  <button class="button button--primary" (click)="drawCard('truth')">אמת 🔍</button>
+  <button class="button button--primary" (click)="drawCard('dare')">חובה 💥</button>
 </div>
 
-<div class="card" [ngClass]="currentLevel" *ngIf="currentCard">
-  {{ currentCard }}
-</div>
-
-<div class="buttons">
-  <button class="button button--confirm" (click)="addPoint(1)">+ נקודה לו</button>
-  <button class="button button--confirm" (click)="addPoint(2)">+ נקודה לה</button>
+<div class="task-card" [ngClass]="currentLevel" *ngIf="currentCard">
+  <p class="task-card__text">{{ currentCard }}</p>
+  <p class="task-card__points">(ניקוד: {{ getPointsForLevel(currentLevel) }})</p>
 </div>
 
 <div class="buttons">
-  <button class="button button--outline" (click)="resetGame()">התחל מחדש 🔄</button>
+  <button class="button button--confirm" (click)="addPoint(1, getPointsForLevel(currentLevel))">+ נקודה לו</button>
+  <button class="button button--confirm" (click)="addPoint(2, getPointsForLevel(currentLevel))">+ נקודה לה</button>
+</div>
+
+<div class="buttons">
+  <button class="button button--outline" (click)="resetGame()">🔄 התחל מחדש</button>
 </div>
 
 <app-modal
@@ -28,16 +32,8 @@
   (close)="closeInstructions()"
 >
   <p>
-    בתורות, כל אחד בוחר אם הוא רוצה לענות על
-    <br>
-    שאלה (אמת) או לבצע משימה (חובה).
-    <br>
-    לכל משימה דרגת קושי וניקוד בהתאם.
-    <br>
-    <br>
-    השלימו את האתגר כדי לצבור נקודות.
-    <br>
-    הראשון להגיע ל-10 נקודות מנצח!
+    🎲 בתורות, כל אחד בוחר אם הוא רוצה לענות על שאלה (אמת) או לבצע משימה (חובה).<br>
+    🧩 לכל משימה דרגת קושי וניקוד בהתאם.<br>
+    🏅 השלימו את האתגר כדי לצבור נקודות – הראשון ל-10 מנצח!
   </p>
 </app-modal>
-
