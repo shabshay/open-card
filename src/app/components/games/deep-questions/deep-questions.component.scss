@@ -1,3 +1,5 @@
+@use 'colors';
+
 :host {
   text-align: center;
 }
@@ -11,8 +13,8 @@
 }
 
 .task-card {
-  background-color: #fdf7f5;
-  border: 2px solid #e6c5c5;
+  background-color: colors.$white;
+  border: 2px solid colors.$light-pink;
   border-radius: 1rem;
   padding: 1.5rem;
   margin: 1.5rem auto;

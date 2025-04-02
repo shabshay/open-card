@@ -1,3 +1,5 @@
+@use 'colors';
+
 :host {
   display: block;
   text-align: center;
@@ -6,7 +8,7 @@
 .score {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  background: #ffeaea;
+  background: colors.$light-pink;
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -26,7 +28,7 @@
   padding: 2rem;
   width: 90%;
   max-width: 400px;
-  background-color: #ffeaea;
+  background-color: colors.$light-pink;
   border-radius: 2rem;
   font-size: 1.2rem;
   font-weight: 500;
@@ -34,15 +36,15 @@
   animation: fadeIn 0.3s ease-in;
 
   &.easy {
-    border: 2px solid #7dd87d;
+    border: 2px solid colors.$green;
   }
 
   &.medium {
-    border: 2px solid #f5cd62;
+    border: 2px solid colors.$yellow;
   }
 
   &.hard {
-    border: 2px solid #d95f5f;
+    border: 2px solid colors.$red;
   }
 }
 
@@ -68,19 +70,19 @@
 
 .score {
   font-size: 1.1rem;
-  color: #444;
+  color: colors.$dark-gray;
   margin: 1rem auto;
   text-align: center;
 
   &__label {
     font-weight: bold;
-    color: #793f3f;
+    color: colors.$dark-red2;
   }
 }
 
 .task-card {
-  background-color: #fdf7f5;
-  border: 2px solid #e6c5c5;
+  background-color: colors.$white;
+  border: 2px solid colors.$light-pink;
   border-radius: 1rem;
   padding: 1.5rem;
   margin: 1.5rem auto;
@@ -102,17 +104,17 @@
   }
 
   &.easy {
-    border-color: #a3d9a5;
-    background-color: #f2fff3;
+    border-color: colors.$light-green;
+    background-color: colors.$very-light-green;
   }
 
   &.medium {
-    border-color: #f2d28b;
-    background-color: #fffaf0;
+    border-color: colors.$light-yellow;
+    background-color: colors.$very-light-yellow;
   }
 
   &.hard {
-    border-color: #f28b82;
-    background-color: #fff4f4;
+    border-color: colors.$light-red;
+    background-color: colors.$very-light-pink;
   }
 }
