@@ -37,3 +37,15 @@
     🏅 השלימו את האתגר כדי לצבור נקודות – הראשון ל-10 מנצח!
   </p>
 </app-modal>
+
+<app-modal
+  *ngIf="winner"
+  title="🥳 יש מנצח/ת!"
+  confirmText="שחקו שוב"
+  (close)="resetGame()"
+>
+  <p>
+    כל הכבוד {{ winner }}!<br>
+    הגעת ל-10 נקודות וניצחת במשחק ❤️
+  </p>
+</app-modal>

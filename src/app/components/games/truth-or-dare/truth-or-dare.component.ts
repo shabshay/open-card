@@ -26,6 +26,8 @@ export class TruthOrDareComponent {
   currentLevel = '';
   score1 = 0;
   score2 = 0;
+  winner: string | null = null;
+
 
   drawCard(type: 'truth' | 'dare') {
     const pool = type === 'truth' ? truths : dares;
@@ -51,6 +53,9 @@ export class TruthOrDareComponent {
   addPoint(player: number, points: number) {
     if (player === 1) this.score1 += points;
     else this.score2 += points;
+
+    if (this.score1 >= 10) this.winner = 'אתה';
+    if (this.score2 >= 10) this.winner = 'את';
   }
 
   resetGame() {
@@ -60,6 +65,7 @@ export class TruthOrDareComponent {
     this.currentLevel = '';
     this.score1 = 0;
     this.score2 = 0;
+    this.winner = null;
   }
 
   getPointsForLevel(level: string): number {
