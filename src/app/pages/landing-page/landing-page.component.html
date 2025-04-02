@@ -2,7 +2,7 @@
   <div class="text">
     <h1>ערב זוגי מושלם<br>מתחיל במשחק</h1>
     <p>משחקים שיחברו ביניכם, יצחיקו אתכם ויעזרו לכם להעמיק את הקשר – בלי לצאת מהבית.</p>
-    <button class="button button--confirm" routerLink="/games">🎲 התחילו לשחק עכשיו</button>
+    <button class="button button--confirm" [routerLink]="routesPaths.games">🎲 התחילו לשחק עכשיו</button>
   </div>
   <img src="assets/open-card-logo.svg" alt="קלף פתוח" class="hero-image" />
 </section>
@@ -17,13 +17,13 @@
 <section class="music">
   <h2>הכניסו קצת קצב לדייט שלכם 🎶</h2>
   <p class="game-name">מוזיקה טובה יוצרת אווירה קסומה. בחרנו עבורכם מיקסים רגועים ומרגיעים שילוו את הדייט שלכם ויעמיקו את הקסם. 💑</p>
-  <button class="button button--primary" routerLink="/music">🎧 השמיעו מוזיקה לדייט</button>
+  <button class="button button--primary" [routerLink]="routesPaths.music">🎧 השמיעו מוזיקה לדייט</button>
 </section>
 
 <section class="sample-game">
   <h2>משחק לדוגמה</h2>
   <p class="game-name">הכירו את "אמת או חובה" – משחק זוגי שובב שיעזור לכם להיפתח, לשבור את הקרח ולגלות דברים חדשים זה על זו.</p>
-  <button class="button button--primary" routerLink="/truth-or-dare">🃏 נסו את המשחק</button>
+  <button class="button button--primary" [routerLink]="routesPaths.truthOrDare">🃏 נסו את המשחק</button>
 </section>
 
 <section id="contact" class="contact">

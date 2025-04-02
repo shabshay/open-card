@@ -4,7 +4,7 @@
 
 <div class="menu">
   <button class="button button--primary"
-    routerLink="/truth-or-dare"
+    [routerLink]="routesPaths.truthOrDare"
     appTooltip="משחק עם משימות זוגיות מצחיקות"
     tooltipPosition="bottom"
     [tooltipDelay]="300"
@@ -12,7 +12,7 @@
   >
     אמת או חובה לנשואים+ 🔥
   </button>
-  <button class="button button--primary" routerLink="/deep-questions">שאלות עומק לזוגות 💬</button>
+  <button class="button button--primary" [routerLink]="routesPaths.deepQuestions">שאלות עומק לזוגות 💬</button>
   <button class="button button--primary" disabled>משחקי גיבוש לקבוצות (בקרוב) 🎉</button>
   <button class="button button--primary" disabled>משחק הפתקים (בקרוב) 🃏</button>
 </div>

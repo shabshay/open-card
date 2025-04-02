@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
 import {TooltipDirective} from '../shared/tooltip.directive';
+import {routesPaths} from '../app.routes';
 
 @Component({
   selector: 'app-games-menu',
@@ -11,4 +12,6 @@ import {TooltipDirective} from '../shared/tooltip.directive';
   ],
   styleUrls: ['./games-menu.component.scss']
 })
-export class GamesMenuComponent {}
+export class GamesMenuComponent {
+  protected readonly routesPaths = routesPaths;
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
+import {routesPaths} from '../../app.routes';
 
 @Component({
   selector: 'app-header',
@@ -15,4 +16,6 @@ export class HeaderComponent {
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
+
+  protected readonly routesPaths = routesPaths;
 }

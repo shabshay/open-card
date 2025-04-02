@@ -5,10 +5,22 @@ import {DeepQuestionsComponent} from './games/deep-questions/deep-questions.comp
 import {LandingPageComponent} from './pages/landing-page/landing-page.component';
 import {MusicComponent} from './music/music.component';
 
+const gamesRoute = 'games'
+
+export const routesPaths = {
+  home: '',
+  games: 'games',
+  truthOrDare: `${gamesRoute}/truth-or-dare`,
+  deepQuestions: `${gamesRoute}/deep-questions`,
+  music: 'music'
+}
+
 export const routes: Routes = [
-  { path: '', component: LandingPageComponent },
-  { path: 'truth-or-dare', component: TruthOrDareComponent },
-  { path: 'deep-questions', component: DeepQuestionsComponent },
-  { path: 'games', component: GamesMenuComponent },
-  { path: 'music', component: MusicComponent },
+  { path: routesPaths.home, component: LandingPageComponent },
+  { path: routesPaths.games, component: GamesMenuComponent },
+  { path: routesPaths.truthOrDare, component: TruthOrDareComponent },
+  { path: routesPaths.deepQuestions, component: DeepQuestionsComponent },
+  { path: routesPaths.music, component: MusicComponent },
 ];
+
+
