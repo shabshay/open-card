@@ -39,7 +39,6 @@ a {
 .cards-section {
   padding: 2rem;
   text-align: center;
-  background-color: #fff4f2;
 
   &__title {
     font-size: 2rem;
@@ -61,7 +60,7 @@ a {
 }
 
 .card {
-  background: #fff;
+  background: colors.$text-light;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
