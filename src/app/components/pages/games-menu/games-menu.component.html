@@ -1,18 +1,30 @@
-<div class="centered-content">
-  <p>בחרו משחק זוגי או חברתי והתחילו לשחק!</p>
-</div>
+<section class="games-menu">
+  <h2 class="games-menu__title">בחרו משחק זוגי והתחילו לשחק 🎲</h2>
+  <p class="games-menu__subtitle">בין אם בא לכם לצחוק, להעמיק או להתרגש – תמצאו כאן את המשחק המושלם.</p>
 
-<div class="menu">
-  <button class="button button--primary"
-    [routerLink]="'/' + routesPaths.truthOrDare"
-    appTooltip="משחק עם משימות זוגיות מצחיקות"
-    tooltipPosition="bottom"
-    [tooltipDelay]="300"
-    [tooltipHideDelay]="100"
-  >
-    אמת או חובה לנשואים+ 🔥
-  </button>
-  <button class="button button--primary" [routerLink]="'/' + routesPaths.deepQuestions">שאלות עומק לזוגות 💬</button>
-  <button class="button button--primary" disabled>משחקי גיבוש לקבוצות (בקרוב) 🎉</button>
-  <button class="button button--primary" disabled>משחק הפתקים (בקרוב) 🃏</button>
-</div>
+  <div class="game-cards">
+    <div class="game-card">
+      <h3 class="game-card__title">🔥 אמת או חובה לנשואים+</h3>
+      <p class="game-card__desc">משחק עם משימות זוגיות מצחיקות שיביא אתכם קרוב יותר מתמיד.</p>
+      <button class="button button--primary" [routerLink]="['/', routesPaths.truthOrDare]">התחילו לשחק</button>
+    </div>
+
+    <div class="game-card">
+      <h3 class="game-card__title">💬 שאלות עומק לזוגות</h3>
+      <p class="game-card__desc">כרטיסיות עם שאלות שיעזרו לכם להעמיק את השיח והקשר הרגשי.</p>
+      <button class="button button--primary" [routerLink]="['/', routesPaths.deepQuestions]">לשאלות</button>
+    </div>
+
+    <div class="game-card game-card--soon">
+      <h3 class="game-card__title">🎉 משחקי גיבוש לקבוצות (בקרוב)</h3>
+      <p class="game-card__desc">משחקים שמתאימים למפגש עם חברים או קבוצות קטנות.</p>
+      <button class="button" disabled>בקרוב</button>
+    </div>
+
+    <div class="game-card game-card--soon">
+      <h3 class="game-card__title">🃏 משחק הפתקים (בקרוב)</h3>
+      <p class="game-card__desc">המשחק שבו אתם יוצרים את התוכן – מתאים לערב מצחיק במיוחד!</p>
+      <button class="button" disabled>בקרוב</button>
+    </div>
+  </div>
+</section>
