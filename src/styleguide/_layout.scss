@@ -2,7 +2,7 @@
 
 .page {
   direction: rtl;
-  background-color: colors.$page-bg;
+  background-color: colors.$very-light-pink;
   min-height: 70vh;
   border-bottom-left-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
@@ -13,7 +13,7 @@
   h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: colors.$text-header;
+    color: colors.$dark-brown;
   }
 }
 
@@ -60,7 +60,7 @@ a {
 }
 
 .card {
-  background: colors.$text-light;
+  background: colors.$white;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);

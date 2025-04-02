@@ -1,16 +1,16 @@
-@use './colors' as c;
-@use './fonts' as f;
+@use 'colors';
+@use 'fonts';
 @use 'sass:color';
 
 .button {
-  font-family: f.$font-primary;
-  border: 2px solid c.$border;
+  font-family: fonts.$font-primary;
+  border: 2px solid colors.$light-brown;
   padding: 0.8em 1.5em;
   border-radius: 20px;
   cursor: pointer;
   font-size: 1rem;
   background-color: transparent;
-  color: c.$text-dark;
+  color: colors.$dark-brown2;
   transition: background 0.3s ease, color 0.3s ease;
 
   &:disabled {
@@ -19,33 +19,33 @@
   }
 
   &--primary {
-    background-color: c.$primary;
-    color: c.$text-dark;
+    background-color: colors.$light-pink;
+    color: colors.$dark-brown2;
     border: none;
 
     &:hover {
-      background-color: color.adjust(c.$primary, $lightness: -5%);
+      background-color: color.adjust(colors.$light-pink, $lightness: -5%);
     }
   }
 
   &--outline {
     background-color: transparent;
-    border: 2px solid c.$rounded-bg;
+    border: 2px solid colors.$dark-pink;
 
     &:hover {
-      background-color: c.$rounded-bg;
-      color: c.$text-light;
+      background-color: colors.$dark-pink;
+      color: colors.$white;
     }
   }
 
   &--confirm {
-    background-color: c.$rounded-bg;
-    color: c.$rounded-text;
+    background-color: colors.$dark-pink;
+    color: colors.$white;
     border: none;
     transition: background 0.3s ease;
 
     &:hover {
-      background-color: color.adjust(c.$rounded-bg, $lightness: -10%);
+      background-color: color.adjust(colors.$dark-pink, $lightness: -10%);
     }
   }
 }

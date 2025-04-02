@@ -7,8 +7,7 @@ import {routesPaths} from '../../../app.routes';
   selector: 'app-games-menu',
   templateUrl: './games-menu.component.html',
   imports: [
-    RouterLink,
-    TooltipDirective
+    RouterLink
   ],
   styleUrls: ['./games-menu.component.scss']
 })
