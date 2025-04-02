@@ -35,3 +35,55 @@ section {
 a {
   text-decoration: none;
 }
+
+.cards-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fff4f2;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #793f3f;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__desc {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  &--soon {
+    opacity: 0.6;
+    filter: grayscale(60%);
+  }
+}

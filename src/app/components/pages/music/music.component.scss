@@ -20,4 +20,8 @@
   text-align: center;
 }
 
-
+.card {
+  &__desc {
+    margin-bottom: 2rem;
+  }
+}
