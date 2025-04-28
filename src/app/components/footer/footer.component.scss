@@ -1,0 +1,22 @@
+@import "colors";
+
+.footer {
+  background-color: $very-light-pink;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: $dark-brown;
+  border-top: 1px solid $light-pink;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50px;
+
+  .footer-bottom {
+    margin-top: auto;
+    font-size: 0.8rem;
+    color: $medium-gray;
+  }
+}
